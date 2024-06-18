@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pure Earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav {
+        background-color: rgb(246, 244, 234);
+        position: sticky;
+      }
+
+      p {
+        display: inline-block;
+        margin-right: 30px;
+        margin-top: 30px;
+        color: black;
+        position: relative;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      p:not(.logo, .description)::after {
+        content: ""; /* Added content property */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px; /* Initial height of the line */
+        width: 0; /* Initial width of the line (hidden) */
+        background-color: black; /* Color of the line */
+        transition: width 0.25s; /* Transition for the width property */
+      }
+
+      p:not(.logo, .description, .fossil-description):hover::after {
+        width: 100%; /* Full width of the line */
+      }
+
+      .logo {
+        margin-right: 550px;
+        margin-left: 120px;
+        font-size: x-large;
+        font-weight: bold;
+      }
+
+      .description {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 64px;
+        color: rgb(43, 41, 40);
+        font-style: italic;
+        margin-top: 200px;
+      }
+
+      .left-main {
+        display: inline-block;
+        width: 550px;
+        margin-left: 150px;
+      }
+
+      .right-main {
+        display: inline-block;
+        width: 500px;
+        margin-left: 100px;
+        margin-right: 100px;
+        vertical-align: middle;
+      }
+
+      .lightbulb {
+        width: 100%;
+      }
+
+      .banner {
+        background-color: rgb(59, 99, 72);
+        height: 80px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+      }
+
+      .banner-text {
+        font-size: 24px;
+        color: white;
+        font-weight: lighter;
+        letter-spacing: 3px;
+      }
+
+      .fossil-left {
+        display: inline-block;
+        background-color: rgb(197, 216, 190);
+        width: 50%;
+        height: 500px;
+      }
+      .fossil-right {
+        display: inline-block;
+        width: 49.7%;
+        height: 500px;
+      }
+
+      .fossil-description {
+        display: inline-block;
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin-top: 250px;
+        font-size: 48px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: lighter;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <p class="logo">PureEarth</p>
+      <p>Home</p>
+
+      <a href="http://127.0.0.1:5500/green-energy.html">
+        <p>Green Energy</p>
+      </a>
+
+      <a href="http://127.0.0.1:5500/solutions.html">
+        <p>Solutions</p>
+      </a>
+
+      <a href="http://127.0.0.1:5500/green-energy.html">
+        <p>Contact Us</p>
+      </a>
+
+      <a href="http://127.0.0.1:5500/green-energy.html">
+        <p>Sources</p>
+      </a>
+    </div>
+
+    <div class="left-main">
+      <p class="description">Keep the World Clean and Green</p>
+    </div>
+
+    <div class="right-main">
+      <img class="lightbulb" src="static/heart.gif" alt="" />
+    </div>
+
+    <div class="banner">
+      <h1 class="banner-text">WE MEET YOU WHERE YOU ARE</h1>
+    </div>
+
+    <div class="fossil-left">
+      <p class="fossil-description">Keep the World Clean</p>
+    </div>
+
+    <div class="fossil-right">
+      <p class="fossil-description">Keep the World Clean</p>
+    </div>
+
+    <div class="banner">
+      <h1 class="banner-text">WE MEET YOU WHERE YOU ARE</h1>
+    </div>
+  </body>
+</html>

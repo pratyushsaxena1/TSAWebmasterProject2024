@@ -1,0 +1,542 @@
+{% extends "base.html" %} {% block title %}Solutions{% endblock %}
+
+<!-- head -->
+{% block head %}
+<title>Solutions</title>
+<style>
+  /* put css here */
+  .efficient-products {
+    margin-top: 30px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(59, 99, 72);
+  }
+
+  .product-info {
+    padding-left: 10%;
+    padding-right: 5%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    padding-left: 12%;
+    padding-right: 12%;
+    font-size: 18px;
+    font-size: 22px;
+    line-height: 25px;
+  }
+
+  .two-title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .banner {
+    background-color: rgb(233, 229, 212);
+    height: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+
+  .banner-text {
+    font-size: 24px;
+    color: black;
+    font-weight: lighter;
+    letter-spacing: 3px;
+  }
+  .led-info {
+    padding-right: 10%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .two-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    background-color: rgb(59, 99, 72);
+    text-align: center;
+    padding-bottom: 5%;
+  }
+
+  .two-layout img {
+    padding-top: 10%;
+    margin-bottom: 5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: vertical;
+    padding-left: 5%;
+  }
+
+  .two-info {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .solar-panel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .solar-panel-img {
+    width: 100%;
+    height: auto; /* Ensure the aspect ratio is maintained */
+    display: inline-block; /* Necessary to apply margins */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .solar-panel p {
+    position: absolute; /* Position the paragraph absolutely */
+    top: 10px; /* Adjust the top position as needed */
+    margin: 0;
+    transform: translateX(-50%); /* Adjust for center alignment */
+    color: black; /* Set the text color */
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  em {
+    color: rgb(240, 237, 225);
+  }
+
+  .efficient-products p,
+  .two-layout p,
+  .solar-products p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: white;
+  }
+
+  .solar-products {
+    margin-top: 30px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(59, 99, 72);
+  }
+</style>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- Put code here -->
+<div
+  class="bg-gradient-to-b from-darkGreen to-blackGreen h-[50vh]"
+  style="z-index: 1"
+>
+  <div
+    class="relative isolate px-6 pt-10 lg:px-8 animate-fade-up animate-once animate-ease-linear"
+  >
+    <div class="mx-auto max-w-7xl py-10 sm:py-48 lg:py-32">
+      <div class="text-center">
+        <h1
+          class="text-4xl tracking-tight text-white sm:text-6xl md:text-7xl lg:text-7xl xl:text-7xl"
+        >
+          <span class="text-white-300 font-extrabold">Solutions</span>
+        </h1>
+
+        <!-- Scroll Down Button -->
+        <div class="flex-row self-center">
+          <a
+            href="#start"
+            class="text-black font-bold bg-beige px-6 py-3 rounded-2xl inline-block transition-all mt-6"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  id="start"
+  class="overflow-hidden bg-gradient-to-b from-black to-emerald-700 py-24 sm:py-32"
+>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <p
+            class="mt-2 text-3xl font-bold tracking-tight text-beige sm:text-4xl"
+          >
+            Energy Efficient Refrigerators, Washing Machines, and HVAC Systems
+          </p>
+          <p class="mt-6 text-lg leading-8 text-beige">
+            Upgrading to energy-efficient appliances and HVAC systems is a smart investment that reduces your 
+            utility bills by consuming less electricity, saving you money and preserving natural resources.
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-beige lg:max-w-none text-lg"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Cost:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    Energy-Efficient refrigerators and washing machines may cost
+                    from <span class="font-bold">$500 to $2500</span>, depending
+                    on brand and style.
+                  </li>
+                  <div class="h-2"></div>
+                  <li>
+                    HVAC systems can go from
+                    <span class="font-bold">$2,500 to $5,000</span> for a small
+                    home, while more advanced systems or those for larger homes
+                    could cost <span class="font-bold">$10,000</span> or more.
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Rebate:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    Generally, you can get <span class="font-bold">30%</span> of
+                    the cost of the project with a maximum amount of
+                    <span class="font-bold">$600</span>.
+                  </li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <img
+        src="{{ url_for('static', filename='fridge.png') }}"
+        alt="Product screenshot"
+        class="w-[30rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[40rem] md:-ml-4 lg:-ml-0"
+        width="2432"
+        height="1442"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="bg-emerald-700 p-5">
+  <div class="banner rounded-xl shadow-lg">
+    <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+  </div>
+</div>
+<div
+  class="overflow-hidden bg-gradient-to-b from-emerald-700 to-black py-24 sm:py-32"
+>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <p
+            class="mt-2 text-3xl font-bold tracking-tight text-beige sm:text-4xl"
+          >
+            Changing to LED Lighting
+          </p>
+          <p class="mt-6 text-lg leading-8 text-beige">
+             LED bulbs use significantly less energy than traditional incandescent bulbs, while also lasting much longer,
+            which means fewer replacements and reduced waste. 
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-beige lg:max-w-none text-lg"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Cost:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    On average, LED bulbs can range from
+                    <span class="font-bold">$2 to $20</span> or more per bulb.
+                    But the potential energy savings and longer lifespan of LED
+                    bulbs often make them a cost-effective choice in the long
+                    run.
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Rebate:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    The federal government provides many rebates and incentives
+                    to switch to LED lighting. There are more rebates based on
+                    specific certifications.
+                  </li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <img
+        src="{{ url_for('static', filename='ledlighting.png') }}"
+        alt="Product screenshot"
+        class="w-[30rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[40rem] md:-ml-4 lg:-ml-0"
+        width="2432"
+        height="1442"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="bg-black p-5">
+  <div class="banner rounded-xl shadow-lg">
+    <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+  </div>
+</div>
+
+<div class="bg-gradient-to-b from-black to-emerald-700">
+  <div class="container mx-auto py-12 border-emerald-700">
+    <div class="flex flex-col lg:flex-row lg:space-x-4">
+      <div class="w-full lg:w-1/2 bg-beige rounded-lg shadow-md px-6 py-8">
+        <h3 class="text-xl font-bold mb-4">Smart Thermostats</h3>
+        <div class="mx-auto mb-4 overflow-hidden">
+          <img
+            src="static/thermostat.png"
+            alt="Smart Thermostat"
+            class="w-full object-cover rounded-lg shadow-md border-back"
+          />
+        </div>
+        <p class="text-gray-700 mb-4">
+          Smart thermostats can help you save money on your energy bills by
+          learning your heating and cooling preferences and automatically
+          adjusting the temperature accordingly. They come in a variety of tiers
+          to fit your needs and budget.
+        </p>
+        <ul class="list-disc pl-4 mb-4">
+          <li class="text-gray-700">
+            Basic models typically have a programmable schedule.
+          </li>
+          <li class="text-gray-700">
+            Mid-range models may have features like occupancy sensors and smart
+            home integration.
+          </li>
+          <li class="text-gray-700">
+            High-end models can include features like learning algorithms and
+            weather forecasting.
+          </li>
+        </ul>
+        <div class="flex items-center">
+          <p class="text-gray-700 mr-2">Cost:</p>
+          <p class="text-gray-700 font-bold">$100 - $500</p>
+        </div>
+        <div class="flex items-center mt-2">
+          <p class="text-gray-700 mr-2">Rebate:</p>
+          <p class="text-gray-700 font-bold">Up to $75</p>
+        </div>
+      </div>
+      <div
+        class="w-full lg:w-1/2 bg-beige rounded-lg shadow-md px-6 py-8 mt:10 sm:mt-0"
+      >
+        <h3 class="text-xl font-bold mb-4">Energy Star Windows</h3>
+        <div class="mx-auto mb-4 overflow-hidden">
+          <img
+            src="static/window.png"
+            alt="Energy Star Window"
+            class="w-full object-cover rounded-lg shadow-md"
+          />
+        </div>
+        <p class="text-gray-700 mb-4">
+          Energy Star windows can help you save money on your energy bills by
+          reducing heat gain in the summer and heat loss in the winter. They are
+          available in a variety of styles to match your home's aesthetics.
+        </p>
+        <div class="flex items-center">
+          <p class="text-gray-700 mr-2">Cost:</p>
+          <p class="text-gray-700 font-bold">
+            $200 - $800 (including installation)
+          </p>
+        </div>
+        <div class="flex items-center mt-2">
+          <p class="text-gray-700 mr-2">Rebate:</p>
+          <p class="text-gray-700 font-bold">
+            Up to $1200 (total for qualifying home improvements)
+          </p>
+        </div>
+        <p class="text-gray-700 mt-3">
+          Rebates are available for a variety of home improvements, including
+          windows, doors, skylights, insulation, and electrical upgrades.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-emerald-700 p-5">
+  <div class="banner rounded-xl shadow-lg">
+    <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+  </div>
+</div>
+
+<div
+  class="overflow-hidden bg-gradient-to-b from-emerald-700 to-black py-24 sm:py-32"
+>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <p
+            class="mt-2 text-3xl font-bold tracking-tight text-beige sm:text-4xl"
+          >
+            Install Solar Panels
+          </p>
+          <p class="mt-6 text-lg leading-8 text-beige">
+            Installing solar panels harnesses the sun's power for your home or business, reducing your carbon 
+            footprint and cutting energy costs while boosting property value.
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-beige lg:max-w-none text-lg"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Cost:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    Solar PV systems cost about $3 per watt installed. A 7,000
+                    watt (7 kilowatt) system therefore costs about
+                    <span class="font-bold">$21,000</span> to install. Such a
+                    system would provide 20 to 35 kilowatt-hours of electricity
+                    per day, depending on climate, and could meet most of a
+                    household's demand.
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Rebate:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    Generally, federal tax credit and rebate can cover up to <span class="font-bold">26%</span> of
+                    the cost of the project.
+                    <span class="font-bold">$600</span>.
+                  </li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <img
+        src="{{ url_for('static', filename='panel.jpeg') }}"
+        alt="Product screenshot"
+        class="w-[30rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[40rem] md:-ml-4 lg:-ml-0"
+        width="2432"
+        height="1442"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="bg-black p-5">
+  <div class="banner rounded-xl shadow-lg">
+    <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+  </div>
+</div>
+
+<div
+  class="overflow-hidden bg-gradient-to-b from-black to-emerald-700 py-24 sm:py-32"
+>
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <p
+            class="mt-2 text-3xl font-bold tracking-tight text-beige sm:text-4xl"
+          >
+            Investing in an Electric Car and an Electric Charging Station
+          </p>
+          <p class="mt-6 text-lg leading-8 text-beige">
+            Electric cars offer zero-emission transportation, saving you money on fuel costs while reducing air pollution.
+            Pairing your electric car with a home electric charging station ensures convenient and efficient charging
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-beige lg:max-w-none text-lg"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Cost:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    Entry level models cost
+                    <span class="font-bold">$30,000 to $40,000</span>
+                  </li>
+                  <li>
+                    Mid-Range Models cost
+                    <span class="font-bold">$40,000 to $50,000</span>
+                  </li>
+                  <li>
+                    Luxury Models cost
+                    <span class="font-bold">$60,000 to over $100,000</span>
+                  </li>
+                </ul>
+              </dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-extrabold text-beige">Rebate:</dt>
+              <div class="h-2"></div>
+              <dd class="inline">
+                <ul class="list-disc">
+                  <li>
+                    In the US, there is a federal tax credit available for
+                    electric vehicles, which can range from
+                    <span class="font-bold">$2,500 to $7,500</span> depending on
+                    different factors. There are also rebates at the state and
+                    local level!
+                  </li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <img
+        src="{{ url_for('static', filename='electriccar.png') }}"
+        alt="Product screenshot"
+        class="w-[30rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[40rem] md:-ml-4 lg:-ml-0"
+        width="2432"
+        height="1442"
+      />
+    </div>
+  </div>
+</div>
+{% endblock %}

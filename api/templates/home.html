@@ -1,0 +1,201 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+
+<!-- head -->
+{% block head %}
+<style>
+  .sun {
+    background-image: url("../static/sun.jpg");
+  }
+  .wind {
+    background-image: url("../static/wind.jpg");
+  }
+  .water {
+    background-image: url("../static/water.jpg");
+  }
+  .geothermal {
+    background-image: url("../static/geothermal.jpg");
+  }
+  .sun,
+  .wind,
+  .water,
+  .geothermal {
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  em {
+    color: white;
+  }
+
+  .text-2xl {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-indent: 1em
+  }
+</style>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- Top -->
+<div
+  class="bg-gradient-to-b from-darkGreen to-blackGreen h-screen"
+  style="z-index: 1"
+>
+  <div
+    class="relative isolate px-6 pt-14 lg:px-8 animate-fade-up animate-once animate-ease-linear"
+  >
+    <div class="mx-auto max-w-7xl py-10 sm:py-48 lg:py-32">
+      <div class="text-center">
+        <h1
+          class="text-6xl tracking-tight text-white sm:text-8xl md:text-9xl lg:text-9xl xl:text-9xl"
+        >
+          Pure Earth
+        </h1>
+
+        <p class="text-white font-semibold text-3xl">
+          Better energy, better life
+        </p>
+
+        <!-- Scroll Down Button -->
+        <div class="flex-row self-center">
+          <a
+            href="/problem"
+            class="text-black font-bold bg-beige px-6 py-3 rounded-2xl inline-block transition-all mt-6"
+          >
+            Problem
+          </a>
+          <a
+            href="/solutions"
+            class="ml-2 text-black font-bold bg-beige px-6 py-3 rounded-2xl inline-block transition-all mt-6"
+          >
+            Solutions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Sun -->
+<section class="sun p-10">
+  <div class="spacer h-[50vh]"></div>
+  <h1
+    class="text-6xl tracking-tight text-white sm:text-8xl md:text-9xl lg:text-9xl xl:text-9xl text-center font-bold animate-fade-up animate-once animate-ease-linear"
+  >
+    The Sun
+  </h1>
+  <div class="spacer h-[50vh]"></div>
+  <p class="text-white text-center text-2xl font-semibold">
+    Converts sunlight to electricity using solar photovoltaic (PV) or 
+    concentrating solar-thermal power (CSP). PV's are generally used in solar panels. 
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>PV:</em> When light photons hit the PV cell, they can either reflect, pass through, 
+    or get absorbed by the cell. Only the absorbed photons generate electricity. When the semiconductor 
+    material in the cell absorbs a certain amount of photons, they become excited and start moving, generating electricity.
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>CSP:</em> Light reflects off mirrors and is directed to a small area (receiver), usually located at 
+    the top of a tall tower. Inside the receiver, a fluid is heated which can reach up to 500 degrees celsius.
+    The hot fluid is then transferred to water which produces steam to spin turbines.
+  </p>
+  <!-- add whatever you want here, the background image will stay in place -->
+  <div class="spacer h-[50vh]"></div>
+</section>
+<!-- Wind -->
+<section class="wind p-10">
+  <div class="spacer h-[50vh]"></div>
+  <h1
+    class="text-6xl tracking-tight text-white sm:text-8xl md:text-9xl lg:text-9xl xl:text-9xl text-center font-bold"
+  >
+    The Wind
+  </h1>
+  <div class="spacer h-[50vh]"></div>
+  <p class="text-white text-center text-2xl font-semibold">
+    Wind turbines use wind’s kinetic energy to spin the blades to create electricity
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Utility Scale:</em> Turbines that exceed 100 kilowatts in size and are typically installed in large wind farms.
+    They tend to be more cost effective and are grouped in bulks to provide more power to the electrical grid
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Offshore Wind:</em> Turbines that tend to be massive and are installed to the seabed in water depths 
+    of 20-60 meters. These turbines harness the kinetic energy of ocean currents, generating electricity that 
+    is transmitted through cables to onshore facilities. 
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Distributed Wind:</em> Wind energy generation that occurs on a smaller scale, typically closer to where
+    electricity is used. Distributed wind systems are installed closer to homes, business, and communities. They can be
+    installed on roofs, backyards, or small parcels of land, and can be connected to power grids. However, owners of the 
+    turbines can be compensated for providing to the grid.  
+  </p>
+  <!-- add whatever you want here, the background image will stay in place -->
+  <div class="spacer h-[50vh]"></div>
+</section>
+<!-- Water -->
+<section class="water p-10">
+  <div class="spacer h-[50vh]"></div>
+  <h1
+    class="text-6xl tracking-tight text-white sm:text-8xl md:text-9xl lg:text-9xl xl:text-9xl text-center font-bold"
+  >
+    The Water
+  </h1>
+  <div class="spacer h-[50vh]"></div>
+  <p class="text-white text-center text-2xl font-semibold">
+    Harnesses the energy of natural flowing water to generate electricity.
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Impoundment:</em> A large hydropower system uses a dam to store river water in a reservoir. 
+    Water released from the reservoir flows through a turbine, spinning it, which in turn activates a generator to 
+    produce electricity. The water can be released in different amounts based on the changing electricity needs.
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Diversion:</em> Sometimes called a “run-of-river” facility, channels a portion of a river
+    through a canal and/or a penstock (a closed conduit that channels the flow of water to turbines) to utilize 
+    the natural decline of the river elevation to produce energy. A diversion may not require the use of a dam.
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Pumped Storage:</em> Using other power sources, such as solar or wind, PSH (pumped storage hydropower) 
+    uses that energy to pump water from a reservoir at a lower elevation to a reservoir at a higher elevation during 
+    times of low electricity demand. However, when the demand for electricity increases, the stored water in the upper 
+    reservoir is released back to the lower reservoir, spinning turbines to conduct electricity (this part is similar to diversion).
+  </p>
+  <!-- add whatever you want here, the background image will stay in place -->
+  <div class="spacer h-[50vh]"></div>
+</section>
+
+<!-- Geothermal -->
+<section class="geothermal p-10">
+  <div class="spacer h-[50vh]"></div>
+  <h1
+    class="text-6xl tracking-tight text-white sm:text-8xl md:text-9xl lg:text-9xl xl:text-9xl text-center font-bold"
+  >
+    Geothermal
+  </h1>
+  <div class="spacer h-[50vh]"></div>
+  <p class="text-white text-center text-2xl font-semibold">
+    Draws fluids from underground reservoirs at the Earth’s crust to the surface which turns the heat of the 
+    fluid to steam, driving turbines.
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Dry Steam:</em> Are power plants that utilize hydrothermal fluids which are predominantly steam.
+    The steam is directly channeled to turbines to generate electricity. When the steam condenses it is directed back
+    into the underground reservoir to be used again (oldest type).
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Flash Stream:</em> Fluids at temperatures greater than 182°C/360°F, pumped from deep underground, 
+    are transferred from an area of high pressure to low pressure. The pressure difference causes some of the fluid
+    to rapidly condense or “flash” into steam, which can then be used to turn turbines. If any liquid is not transformed, 
+    it is injected back underground to be used in a second “flash”.
+  </p>
+  <p class="text-white text-center text-2xl font-semibold"> 
+    &#8226; <em>Binary-Cycle:</em> Generates electricity by using the hot fluid to heat a secondary fluid with a lower
+    boiling point. The secondary fluid vaporizes at a lower temperature than water so it doesn’t need extremely high 
+    temperatures to turn into steam. The steam is then used to drive a turbine. This allows power plants to generate 
+    electricity from lower-temperature geothermal resources.
+  </p>
+  <!-- add whatever you want here, the background image will stay in place -->
+  <div class="spacer h-[50vh]"></div>
+</section>
+{% endblock %}

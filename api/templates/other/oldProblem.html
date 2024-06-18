@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Problem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav {
+        background-color: rgb(246, 244, 234);
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+      }
+
+       .nav p {
+        display: inline-block;
+        margin-right: 30px;
+        margin-top: 30px;
+        color: black;
+        position: relative;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+    
+      .nav p::after {
+        content: ''; /* Added content property */
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px; /* Initial height of the line */
+        width: 0; /* Initial width of the line (hidden) */
+        background-color: black; /* Color of the line */
+        transition: width 0.25s; /* Transition for the width property */
+      }
+    
+      .nav p:hover::after {
+        width: 100%; /* Full width of the line */
+      }
+    
+      .nav .logo {
+        margin-right: 35%;
+        margin-left: 120px;
+        font-size: x-large;
+        font-weight: bold;
+      }
+      
+      .description {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        color: rgb(43, 41, 40);
+        font-style: italic;
+      }
+      
+      .first-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+      }
+
+      .first-info {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(197, 216, 190);
+        height: 240px;
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 10px;
+        width: auto;
+        height: auto;
+      }
+
+      .info-title {
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 24px;
+        margin-top: 50px;
+      }
+
+      .info-description {
+        text-align: center;
+        padding-left: 8%;
+        padding-right: 8%;
+        line-height: 29px;
+        font-family: roboto;
+        font-size: 18px;
+        margin-bottom: 60px;
+        margin-top: 10px;
+      }
+
+      .banner {
+        background-color: rgb(59, 99, 72);
+        height: 80px;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+      }
+
+      .banner-text {
+        font-size: 24px;
+        color: white;
+        font-weight: lighter;
+        letter-spacing: 3px;
+      }
+
+      .chart-layout {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 930px;
+        padding-top: 30px;
+        background-color: rgb(246, 244, 234);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .chart-layout p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-variant: small-caps;
+      }
+
+      .topic-headers {
+        margin-bottom: 0px;
+        font-size: 21px;
+      }
+
+      .topic-description {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 17px;
+        display: inline-block;
+        margin-bottom: 20%;
+      }
+      
+      .pie-title {
+        font-size: 40px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-left: 10%;
+        padding-right: 10%;
+        color: rgb(43, 41, 40);
+        font-weight: bold;
+      }
+
+      .pie-title em {
+        font-style: italic;
+        font-weight: lighter;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .pie-left {
+        text-align: center;
+        padding-bottom: 50%;
+        padding-left: 10%;
+      }
+
+      .pie-middle {
+        text-align: center;
+      }
+
+      .pie-right {
+        text-align: center;
+        padding-bottom: 50%;
+        padding-right: 10%;
+      }
+
+      .pie-middle-bottom {
+        padding-left: 25%;
+        padding-right: 25%;
+        margin-bottom: 25%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        height: 18px;
+        width: 18px;
+        margin-right: 5px;
+        border-radius: 50%;
+        border: none;
+      }
+
+      .light-green {
+        background-color: #E1EADA;
+      }
+      .mint-green {
+        background-color: #9FC7AA;
+      }
+      .white{
+        background-color: white;
+        width: 22px;
+        height: 20px;
+      }
+      .dark-green{
+        background-color:rgb(59, 99, 72);
+      }
+      .green {
+        background-color: rgb(197, 216, 190);
+      }
+
+      .pie-middle-bottom div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .banner-two {
+        background-color: rgb(59, 99, 72);
+        height: 80px;
+        display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        margin-bottom: -1000px; /* Adjusted margin to remove white space */
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <p class="logo">PureEarth</p>
+      <p>Home</p>
+      <p>The Problem</p>
+      <p>Solutions</p>
+      <p>Contact Us</p>
+      <p>Sources</p>
+    </div>
+
+    <div class="first">
+      <div class="first-header">
+        <p class="description">Keep the World Clean and Green</p>
+      </div>
+
+      <div class="first-info">
+        <p class="info-title">
+          Negative Effects of Fossil Fuels
+        </p>
+        <p class="info-description">
+          Fossil fuels, such as coal, oil, and natural gas, are major contributors to air and water pollution, 
+          greenhouse gas emissions, and climate change. Burning fossil fuels releases harmful pollutants into the atmosphere,
+          leading to respiratory problems, acid rain, and smog. Additionally, the extraction and transportation of fossil fuels 
+          can result in habitat destruction, water contamination, and wildlife endangerment.
+        </p>
+      </div>
+    </div>
+    
+
+    <div class="banner">
+      <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+    </div>
+
+    <div class="chart-layout">
+      <div class="pie-left">
+        <button class="light-green"></button>
+        <p class="topic-headers">WASTE MANAGEMENT</p>
+        <p class="topic-description">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+           to demonstrate the visual 
+        </p>
+        <button class="mint-green"> </button>
+        <p class="topic-headers" >TRANSPORTATION</p>
+        <p class="topic-description" >In publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+           to demonstrate the visual form
+        </p>
+      </div>
+      <div class="pie-middle">
+        <p class="pie-title">Residential Sources of <em>Greenhouse Gases</em></p>
+        <img src="static/Residential Pie.png">
+        <div class="pie-middle-bottom">
+          <div>
+            <button class="white"></button>
+            <p class="topic-headers" >APPLIANCES, ELECTRONICS, LIGHTING</p>
+          </div>
+            <p class="topic-description" >In publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+              to demonstrate the visual
+          </p>
+        </div>
+      </div>
+      <div class="pie-right">
+        <button class="dark-green"></button>
+        <p class="topic-headers" >HEATING AND COOLING</p>
+        <p class="topic-description" >In publishing and graphic design, Lorem ipsum is a placeholder text commonly 
+        </p>
+        <button class="green"> </button>
+        <p class="topic-headers" >CONSTRUCTION</p>
+        <p class="topic-description">In publishing and graphic design, Lorem ipsum is a placeholder text commonly used
+           to demonstrate the visual form of a document or a typeface 
+        </p>
+      </div>
+    </div>
+
+    <div class="banner-two">
+      <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+    </div>
+  </body>
+</html>

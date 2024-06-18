@@ -1,0 +1,294 @@
+{% extends "base.html" %} {% block title %}Problem{% endblock %}
+
+<!-- head -->
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  /* put css here */
+  .description {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 40px;
+    color: rgb(43, 41, 40);
+    font-style: italic;
+  }
+
+  .first-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  .first-info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(197, 216, 190);
+    height: 240px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .info-title {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    margin-top: 50px;
+  }
+
+  .info-description {
+    text-align: center;
+    padding-left: 8%;
+    padding-right: 8%;
+    line-height: 29px;
+    font-family: roboto;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .banner {
+    background-color: rgb(59, 99, 72);
+    height: 80px;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+  }
+
+  .banner-text {
+    font-size: 24px;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 3px;
+  }
+
+  .chart-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 900px;
+    padding-top: 30px;
+    background-color: rgb(246, 244, 234);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chart-layout p {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-variant: small-caps;
+  }
+
+  .topic-headers {
+    margin-bottom: 0px;
+    font-size: 21px;
+  }
+
+  .topic-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    display: inline-block;
+    margin-bottom: 20%;
+  }
+
+  .pie-title {
+    font-size: 40px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: rgb(43, 41, 40);
+    font-weight: bold;
+  }
+
+  .pie-title em {
+    font-style: italic;
+    font-weight: lighter;
+  }
+
+  /* img {
+    width: 100%;
+  } */
+
+  .pie-left {
+    text-align: center;
+    padding-bottom: 50%;
+    padding-left: 10%;
+  }
+
+  .pie-middle {
+    text-align: center;
+  }
+
+  .pie-right {
+    text-align: center;
+    padding-bottom: 50%;
+    padding-right: 10%;
+  }
+
+  .pie-middle-bottom {
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-bottom: 25%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: none;
+  }
+
+  .light-green {
+    background-color: #e1eada;
+  }
+  .mint-green {
+    background-color: #9fc7aa;
+  }
+  .white {
+    background-color: white;
+    width: 22px;
+    height: 20px;
+  }
+  .dark-green {
+    background-color: rgb(59, 99, 72);
+  }
+  .green {
+    background-color: rgb(197, 216, 190);
+  }
+
+  .pie-middle-bottom div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner-two {
+    background-color: rgb(59, 99, 72);
+    height: 80px;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    margin-bottom: -1000px; /* Adjusted margin to remove white space */
+  }
+</style>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<!-- Put code here -->
+<div
+  class="bg-gradient-to-b from-darkGreen to-blackGreen h-[50vh]"
+  style="z-index: 1"
+>
+  <div
+    class="relative isolate px-6 pt-10 lg:px-8 animate-fade-up animate-once animate-ease-linear"
+  >
+    <div class="mx-auto max-w-7xl py-10 sm:py-48 lg:py-32">
+      <div class="text-center">
+        <h1
+          class="text-4xl tracking-tight text-white sm:text-6xl md:text-7xl lg:text-7xl xl:text-7xl"
+        >
+          Keep the World Clean and
+          <span class="text-emerald-300 font-extrabold">Green</span>
+        </h1>
+
+        <!-- Scroll Down Button -->
+        <div class="flex-row self-center">
+          <a
+            href="#start"
+            class="text-black font-bold bg-beige px-6 py-3 rounded-2xl inline-block transition-all mt-6"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="start" class="p-5">
+  <div class="bg-beige py-24 sm:py-32 p-5 rounded-3xl shadow-xl">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:text-center">
+        <p
+          class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          Negative Effects of Fossil Fuels
+        </p>
+        <p class="mt-6 text-lg leading-8 text-gray-600">
+          Fossil fuels, such as coal, oil, and natural gas, are major
+          contributors to air and water pollution, greenhouse gas emissions, and
+          climate change. Burning fossil fuels releases harmful pollutants into
+          the atmosphere, leading to respiratory problems, acid rain, and smog.
+          Additionally, the extraction and transportation of fossil fuels can
+          result in habitat destruction, water contamination, and wildlife
+          endangerment.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="banner">
+  <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+</div>
+
+<div class="p-5 h-[120vh]">
+  <div class="chart-layout rounded-3xl shadow-xl">
+    <div class="pie-left">
+      <button class="light-green"></button>
+      <p class="topic-headers">WASTE MANAGEMENT</p>
+      <p class="topic-description">
+         Waste generates methane, a potent greenhouse gas which is more dangerous than carbon dioxide
+         for the ozone layer. 
+      </p>
+      <button class="mint-green"></button>
+      <p class="topic-headers">TRANSPORTATION</p>
+      <p class="topic-description">
+        Vehicles used for transportation emit CO2 due to fossil fuel combustion.
+      </p>
+    </div>
+    <div class="pie-middle">
+      <p class="pie-title">Residential Sources of <em>Greenhouse Gases</em></p>
+      <img src="{{ url_for('static', filename='pie.png') }}" />
+      <div class="pie-middle-bottom">
+        <div>
+          <button class="white"></button>
+          <p class="topic-headers">APPLIANCES, ELECTRONICS, LIGHTING</p>
+        </div>
+        <p class="topic-description">
+          These devices run on electricity generated from fossil fuels, such as coal or natural gas,
+          the associated emissions contribute to the carbon footprint of households 
+        </p>
+      </div>
+    </div>
+    <div class="pie-right">
+      <button class="dark-green"></button>
+      <p class="topic-headers">HEATING AND COOLING</p>
+      <p class="topic-description">
+        Contribute to CO2 emissions through fossil fuel combustion (e.g., oil, natural gas) 
+        and electricity consumption for heating, cooling, and air conditioning
+      </p>
+      <button class="green"></button>
+      <p class="topic-headers">CONSTRUCTION</p>
+      <p class="topic-description">
+        Construction and renovation activities contribute to CO2 emissions through 
+        energy-intensive processes (e.g., cement production, transportation of materials).
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="banner-two">
+  <h1 class="banner-text">SAVE THE PLANET AGAINST FOSSIL FUELS</h1>
+</div>
+{% endblock %}

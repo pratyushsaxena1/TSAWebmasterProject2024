@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block title %}Sources{% endblock %}
+
+<!-- head -->
+{% block head %}
+<style>
+    .hero-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+      flex-direction: column;
+    }
+
+    .link {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: rgb(59, 99, 72);
+      text-decoration: underline;
+    }
+
+    .header {
+      font-size: 25px;
+      font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="hero-container">
+      <h1 class="header">
+        References
+      </h1>
+
+      <a class="link" href="https://acrobat.adobe.com/id/urn:aaid:sc:US:5bb7b0bd-8254-4a15-9fce-9707c955ee6c" target="_blank"> TSA Student Copyright Checklist</a>
+      <a class="link" href="https://drive.google.com/file/d/1W2UGDEQltbD5K58WtLG_7-xDBHeZgFNn/view?usp=sharing" target="_blank"> TSA Plan of Work Log</a>
+      <a class="link" href="https://drive.google.com/file/d/1wS9tpqwhX8dGPurDDheoiMf4Hk4RvcE5/view?usp=sharing" target="_blank"> Website Research Citations</a>
+      <h1 class="header">
+        Sources
+      </h1>
+      <a class="link" href="https://react.dev/" target="_blank"> ReactJS</a>
+      <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"> HTML5</a>
+      <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> CSS</a>
+
+      <h1 class="header">
+        Royalty-Free Media + Own Images
+      </h1>
+      <a class="link" href="https://unsplash.com/photos/calm-body-of-water-during-sunset-3eC5n6gHwe8" target="_blank"> Sun Image on Unsplash</a>
+      <a class="link" href="https://unsplash.com/photos/trees-with-wind-photo-WtwSsqwYlA0" target="_blank"> Wind Image on Unsplash</a>
+      <a class="link" href="https://unsplash.com/photos/blue-ocean-water-during-daytime-cfR-V1QuEKw" target="_blank"> Water Image on Unsplash</a>
+      <a class="link" href="https://unsplash.com/photos/white-smoke-nSpL2yS0We8" target="_blank"> Geothermal Image on Unsplash</a>
+      <a class="link" href="https://acrobat.adobe.com/id/urn:aaid:sc:US:6b327581-dda6-45c8-aee9-740f47d36863"> Residential Piechart</a>
+
+      <h1 class="header">
+        AI-Generated Art (free to use)
+      </h1>
+      <a class="link" href="https://gemini.google.com/app" target="_blank">Google Gemini</a>
+      <a class="link" href="https://gencraft.com/generate" target="_blank"> Gencraft </a>
+      <a class="link" href="https://create.microsoft.com/en-us/features/ai-image-generator" target="_blank">Microsoft AI</a>
+    </div>
+
+{% endblock %}
